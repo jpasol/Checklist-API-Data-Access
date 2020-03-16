@@ -1,0 +1,5 @@
+C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\bin\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.deps.json
+C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\bin\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.dll
+C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\obj\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.csprojAssemblyReference.cache
+C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\obj\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.AssemblyInfoInputs.cache
+C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\obj\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.AssemblyInfo.cs
