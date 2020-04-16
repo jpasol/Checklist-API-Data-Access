@@ -8,5 +8,5 @@ C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\obj\Debug\netcor
 C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\obj\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.pdb
 C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\bin\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.runtimeconfig.json
 C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\bin\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.runtimeconfig.dev.json
-C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\obj\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.csproj.CoreCompileInputs.cache
 C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\obj\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.genruntimeconfig.cache
+C:\Users\jpasol\Desktop\Repository\EquipmentChecklistDataAccess\obj\Debug\netcoreapp3.1\EquipmentChecklistDataAccess.csproj.CoreCompileInputs.cache
