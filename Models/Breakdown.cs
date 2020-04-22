@@ -10,10 +10,14 @@ namespace EquipmentChecklistDataAccess.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required] 
         public RTGForm RTGForm { get; set; }
+        [Required] 
         public DateTime TimeStart { get; set; }
+        [Required] 
         public DateTime TimeEnd { get; set; }
 
+        [Required]
         [Column(TypeName = "NVARCHAR(150)")]
         public string Description { get; set; }
     }

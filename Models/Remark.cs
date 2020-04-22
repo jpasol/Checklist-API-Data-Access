@@ -10,8 +10,11 @@ namespace EquipmentChecklistDataAccess.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required] 
         public RTGForm RTGForm { get; set; }
+        [Required] 
         public Issue Issue { get; set; }
+        [Required] 
         public Component Component { get; set; }
     }
 }

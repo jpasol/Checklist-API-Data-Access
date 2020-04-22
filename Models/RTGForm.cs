@@ -11,12 +11,15 @@ namespace EquipmentChecklistDataAccess.Models
         [Key]
         [Column(TypeName = "NVARCHAR(15)")]
         public int Id { get; set; }
+        [Required] 
         public Equipment Equipment { get; set; }
 
+        [Required] 
         public DateTime DateCreated { get; set; }
 
         public DateTime DateModified { get; set; }
 
+        [Required] 
         public User CreatedBy { get; set; }
 
         public User ModifiedBy { get; set; }
