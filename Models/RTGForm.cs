@@ -9,20 +9,25 @@ namespace EquipmentChecklistDataAccess.Models
     public class RTGForm
     {
         [Key]
-        [Column(TypeName = "NVARCHAR(15)")]
         public int Id { get; set; }
-        [Required] 
+        [ForeignKey("EquipmentId")]
         public Equipment Equipment { get; set; }
+        [Required]
+        public string EquipmentId { get; set; }
 
         [Required] 
         public DateTime DateCreated { get; set; }
 
         public DateTime DateModified { get; set; }
 
-        [Required] 
+        [ForeignKey("CreatedById")]
         public User CreatedBy { get; set; }
+        [Required] 
+        public string CreatedById { get; set; }
 
+        [ForeignKey("ModifiedById")]
         public User ModifiedBy { get; set; }
+        public string ModifiedById { get; set; }
 
         public List<Remark> Remarks { get; set; }
         public List<Breakdown> Breakdowns { get; set; }

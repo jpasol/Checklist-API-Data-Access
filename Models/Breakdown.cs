@@ -10,8 +10,11 @@ namespace EquipmentChecklistDataAccess.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required] 
+
+        [ForeignKey("RTGFormId")]
         public RTGForm RTGForm { get; set; }
+        [Required] 
+        public int RTGFormId { get; set; }
         [Required] 
         public DateTime TimeStart { get; set; }
         [Required] 

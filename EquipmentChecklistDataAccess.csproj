@@ -9,6 +9,20 @@
     <Compile Remove="Migrations\20200422060417_UpdateSchema.Designer.cs" />
     <Compile Remove="Migrations\20200422061013_UpdateSchema.cs" />
     <Compile Remove="Migrations\20200422061013_UpdateSchema.Designer.cs" />
+    <Compile Remove="Migrations\20200425234132_RTGFormSchemaUpdateKey.cs" />
+    <Compile Remove="Migrations\20200425234132_RTGFormSchemaUpdateKey.Designer.cs" />
+    <Compile Remove="Migrations\20200426024101_AddForeignKeys.cs" />
+    <Compile Remove="Migrations\20200426024101_AddForeignKeys.Designer.cs" />
+    <Compile Remove="Migrations\20200426024235_AddForeignKeys.cs" />
+    <Compile Remove="Migrations\20200426024235_AddForeignKeys.Designer.cs" />
+    <Compile Remove="Migrations\20200426024342_AddForeignKeys.cs" />
+    <Compile Remove="Migrations\20200426024342_AddForeignKeys.Designer.cs" />
+    <Compile Remove="Migrations\20200426024420_AddForeignKeys.cs" />
+    <Compile Remove="Migrations\20200426024420_AddForeignKeys.Designer.cs" />
+    <Compile Remove="Migrations\20200426024513_AddForeignKeys.cs" />
+    <Compile Remove="Migrations\20200426024513_AddForeignKeys.Designer.cs" />
+    <Compile Remove="Migrations\20200426024604_AddForeignKeys.cs" />
+    <Compile Remove="Migrations\20200426024604_AddForeignKeys.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

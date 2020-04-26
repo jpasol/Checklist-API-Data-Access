@@ -4,14 +4,16 @@ using EquipmentChecklistDataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EquipmentChecklistDataAccess.Migrations
 {
     [DbContext(typeof(EquipmentChecklistDBContext))]
-    partial class EquipmentChecklistDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200425235356_ReplaceKeyRTGForm")]
+    partial class ReplaceKeyRTGForm
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,8 +32,9 @@ namespace EquipmentChecklistDataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("NVARCHAR(150)");
 
-                    b.Property<int>("RTGFormId")
-                        .HasColumnType("int");
+                    b.Property<string>("RTGFormTempId")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(15)");
 
                     b.Property<DateTime>("TimeEnd")
                         .HasColumnType("datetime2");
@@ -41,7 +44,7 @@ namespace EquipmentChecklistDataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RTGFormId");
+                    b.HasIndex("RTGFormTempId");
 
                     b.ToTable("Breakdowns");
                 });
@@ -78,10 +81,9 @@ namespace EquipmentChecklistDataAccess.Migrations
 
             modelBuilder.Entity("EquipmentChecklistDataAccess.Models.RTGForm", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("TempId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("NVARCHAR(15)");
 
                     b.Property<string>("CreatedById")
                         .IsRequired()
@@ -100,7 +102,7 @@ namespace EquipmentChecklistDataAccess.Migrations
                     b.Property<string>("ModifiedById")
                         .HasColumnType("NVARCHAR(15)");
 
-                    b.HasKey("Id");
+                    b.HasKey("TempId");
 
                     b.HasIndex("CreatedById");
 
@@ -126,8 +128,9 @@ namespace EquipmentChecklistDataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("NVARCHAR(15)");
 
-                    b.Property<int>("RTGFormId")
-                        .HasColumnType("int");
+                    b.Property<string>("RTGFormTempId")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(15)");
 
                     b.HasKey("Id");
 
@@ -135,7 +138,7 @@ namespace EquipmentChecklistDataAccess.Migrations
 
                     b.HasIndex("IssueId");
 
-                    b.HasIndex("RTGFormId");
+                    b.HasIndex("RTGFormTempId");
 
                     b.ToTable("Remarks");
                 });
@@ -172,7 +175,7 @@ namespace EquipmentChecklistDataAccess.Migrations
                 {
                     b.HasOne("EquipmentChecklistDataAccess.Models.RTGForm", "RTGForm")
                         .WithMany("Breakdowns")
-                        .HasForeignKey("RTGFormId")
+                        .HasForeignKey("RTGFormTempId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -212,7 +215,7 @@ namespace EquipmentChecklistDataAccess.Migrations
 
                     b.HasOne("EquipmentChecklistDataAccess.Models.RTGForm", "RTGForm")
                         .WithMany("Remarks")
-                        .HasForeignKey("RTGFormId")
+                        .HasForeignKey("RTGFormTempId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
