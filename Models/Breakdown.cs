@@ -16,9 +16,9 @@ namespace EquipmentChecklistDataAccess.Models
         [Required] 
         public int RTGFormId { get; set; }
         [Required] 
-        public DateTime TimeStart { get; set; }
+        public DateTime? TimeStart { get; set; }
         [Required] 
-        public DateTime TimeEnd { get; set; }
+        public DateTime? TimeEnd { get; set; }
 
         [Required]
         [Column(TypeName = "NVARCHAR(150)")]

@@ -23,6 +23,14 @@
     <Compile Remove="Migrations\20200426024513_AddForeignKeys.Designer.cs" />
     <Compile Remove="Migrations\20200426024604_AddForeignKeys.cs" />
     <Compile Remove="Migrations\20200426024604_AddForeignKeys.Designer.cs" />
+    <Compile Remove="Migrations\20200501132933_PrdDatabase.cs" />
+    <Compile Remove="Migrations\20200501132933_PrdDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20200501135659_DateTIme2Fix.cs" />
+    <Compile Remove="Migrations\20200501135659_DateTIme2Fix.Designer.cs" />
+    <Compile Remove="Migrations\20200501135927_DateTIme2Fix.cs" />
+    <Compile Remove="Migrations\20200501135927_DateTIme2Fix.Designer.cs" />
+    <Compile Remove="Migrations\20200501140243_DateTIme2Fix.cs" />
+    <Compile Remove="Migrations\20200501140243_DateTIme2Fix.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

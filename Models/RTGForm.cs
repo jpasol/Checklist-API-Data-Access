@@ -16,9 +16,9 @@ namespace EquipmentChecklistDataAccess.Models
         public string EquipmentId { get; set; }
 
         [Required] 
-        public DateTime DateCreated { get; set; }
+        public DateTime? DateCreated { get; set; }
 
-        public DateTime DateModified { get; set; }
+        public DateTime? DateModified { get; set; }
 
         [ForeignKey("CreatedById")]
         public User CreatedBy { get; set; }
