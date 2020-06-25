@@ -6,10 +6,14 @@ using System.Text;
 
 namespace EquipmentChecklistDataAccess.Models
 {
-    public class Issue
+    public class Condition
     {
         [Key]
+        [Column(TypeName = "NVARCHAR(5)")]
+        public string ID { get; set; }
         [Column(TypeName = "NVARCHAR(15)")]
-        public string Id { get; set; }
+        public string Shortname { get; set; }
+        [Column(TypeName = "NVARCHAR(150)")]
+        public string Description { get; set; }
     }
 }

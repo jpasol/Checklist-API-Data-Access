@@ -31,6 +31,20 @@
     <Compile Remove="Migrations\20200501135927_DateTIme2Fix.Designer.cs" />
     <Compile Remove="Migrations\20200501140243_DateTIme2Fix.cs" />
     <Compile Remove="Migrations\20200501140243_DateTIme2Fix.Designer.cs" />
+    <Compile Remove="Migrations\20200625083355_ECCv1.3.cs" />
+    <Compile Remove="Migrations\20200625083355_ECCv1.3.Designer.cs" />
+    <Compile Remove="Migrations\20200625084817_EQCv1.3.cs" />
+    <Compile Remove="Migrations\20200625084817_EQCv1.3.Designer.cs" />
+    <Compile Remove="Migrations\20200625090518_EQCv1.3.cs" />
+    <Compile Remove="Migrations\20200625090518_EQCv1.3.Designer.cs" />
+    <Compile Remove="Migrations\20200625090601_EQCv13.cs" />
+    <Compile Remove="Migrations\20200625090601_EQCv13.Designer.cs" />
+    <Compile Remove="Migrations\20200625090633_EQCv1.3.cs" />
+    <Compile Remove="Migrations\20200625090633_EQCv1.3.Designer.cs" />
+    <Compile Remove="Migrations\20200625092443_EQCv1.3.cs" />
+    <Compile Remove="Migrations\20200625092443_EQCv1.3.Designer.cs" />
+    <Compile Remove="Migrations\20200625103040_EQCv1.3.cs" />
+    <Compile Remove="Migrations\20200625103040_EQCv1.3.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

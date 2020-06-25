@@ -13,13 +13,21 @@ namespace EquipmentChecklistDataAccess
 
         }
 
-        public DbSet<Breakdown> Breakdowns { get; set; }
+        public DbSet<Checklist> Checklists { get; set; }
+        public DbSet<Checklist_Item> Checklist_Items { get; set; }
         public DbSet<Component> Components { get; set; }
         public DbSet<Equipment> Equipments { get; set; }
-        public DbSet<Issue> Issues { get; set; }
-        public DbSet<Remark> Remarks { get; set; }
-        public DbSet<RTGForm> RTGForms { get; set; }
+        public DbSet<Question> Questions { get; set; }  
         public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Checklist_Item>()
+                .HasKey(c => new { c.ChecklistID, c.EquipmentID, c.ComponentID, c.ConditionID });
+
+            modelBuilder.Entity<Question>()
+                .HasKey(c => new { c.EquipmentID, c.ComponentID });
+        }
 
     }
 }

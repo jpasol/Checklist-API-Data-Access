@@ -10,7 +10,7 @@ namespace EquipmentChecklistDataAccess.Models
     {
         [Key]
         [Column(TypeName = "NVARCHAR(15)")]
-        public string Id { get; set; }
+        public string ID { get; set; }
         [Required]
         [Column(TypeName = "NVARCHAR(25)")]
         public string FirstName { get; set; }
@@ -22,6 +22,7 @@ namespace EquipmentChecklistDataAccess.Models
 
         [Required]
         [Column(TypeName = "NVARCHAR(25)")]
+        [MinLength(8)]
         public string Password { get; set; }
 
         [Required]

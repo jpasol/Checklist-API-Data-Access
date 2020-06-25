@@ -9,7 +9,9 @@ namespace EquipmentChecklistDataAccess.Models
     public class Equipment
     {
         [Key]
+        [Column(TypeName = "NVARCHAR(5)")]
+        public string ID { get; set; }
         [Column(TypeName = "NVARCHAR(15)")]
-        public string Id { get; set; }
+        public string Shortname { get; set; }
     }
 }
