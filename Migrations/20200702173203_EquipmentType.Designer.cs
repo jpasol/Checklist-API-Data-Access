@@ -4,14 +4,16 @@ using EquipmentChecklistDataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EquipmentChecklistDataAccess.Migrations
 {
     [DbContext(typeof(EquipmentChecklistDBContext))]
-    partial class EquipmentChecklistDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200702173203_EquipmentType")]
+    partial class EquipmentType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

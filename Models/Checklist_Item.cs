@@ -18,10 +18,10 @@ namespace EquipmentChecklistDataAccess.Models
 
 
         //conditionID
-        [ForeignKey("EquipmentID")]
+        [ForeignKey("Equipment_TypeID")]
         [Column(TypeName = "NVARCHAR(5)")]
-        public Equipment Equipment { get; set; }
-        public string EquipmentID { get; set; }
+        public Equipment_Type Equipment_Type { get; set; }
+        public string Equipment_TypeID { get; set; }
         //conditionID
 
         //componentID

@@ -15,7 +15,9 @@ namespace EquipmentChecklistDataAccess
 
         public DbSet<Checklist> Checklists { get; set; }
         public DbSet<Checklist_Item> Checklist_Items { get; set; }
+        public DbSet<Condition> Conditions { get; set; }
         public DbSet<Component> Components { get; set; }
+        public DbSet<Equipment_Type> Equipment_Types { get; set; }
         public DbSet<Equipment> Equipments { get; set; }
         public DbSet<Question> Questions { get; set; }  
         public DbSet<User> Users { get; set; }
@@ -23,10 +25,10 @@ namespace EquipmentChecklistDataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Checklist_Item>()
-                .HasKey(c => new { c.ChecklistID, c.EquipmentID, c.ComponentID, c.ConditionID });
+                .HasKey(c => new { c.ChecklistID, c.Equipment_TypeID, c.ComponentID, c.ConditionID });
 
             modelBuilder.Entity<Question>()
-                .HasKey(c => new { c.EquipmentID, c.ComponentID });
+                .HasKey(c => new { c.Equipment_TypeID, c.ComponentID });
         }
 
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace EquipmentChecklistDataAccess.Models
 {
@@ -11,10 +12,10 @@ namespace EquipmentChecklistDataAccess.Models
         //primary key defined in dbcontext
 
         //conditionID
-        [ForeignKey("EquipmentID")]
+        [ForeignKey("Equipment_TypeID")]
         [Column(TypeName = "NVARCHAR(5)")]
-        public Equipment Equipment { get; set; }
-        public string EquipmentID { get; set; }
+        public Equipment_Type Equipment_Type { get; set; }
+        public string Equipment_TypeID { get; set; }
         //conditionID
 
         //componentID
