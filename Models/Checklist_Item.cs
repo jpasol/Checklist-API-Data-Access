@@ -38,6 +38,8 @@ namespace EquipmentChecklistDataAccess.Models
         public string ConditionID { get; set; }
         //conditionID
 
+        [Column(TypeName = "NVARCHAR(50)")]
+        public string Remarks { get; set; }
 
     }
 }

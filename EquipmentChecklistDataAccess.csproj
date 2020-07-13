@@ -45,6 +45,8 @@
     <Compile Remove="Migrations\20200625092443_EQCv1.3.Designer.cs" />
     <Compile Remove="Migrations\20200625103040_EQCv1.3.cs" />
     <Compile Remove="Migrations\20200625103040_EQCv1.3.Designer.cs" />
+    <Compile Remove="Migrations\20200713074001_AddedRemark.cs" />
+    <Compile Remove="Migrations\20200713074001_AddedRemark.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
