@@ -29,6 +29,7 @@ namespace EquipmentChecklistDataAccess
 
             modelBuilder.Entity<Question>()
                 .HasKey(c => new { c.Equipment_TypeID, c.ComponentID });
+
         }
 
     }
