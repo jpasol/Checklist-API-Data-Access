@@ -1,3 +1,3 @@
-/obj/*
-/bin/*
+obj/
+bin/
 obj/Debug/netcoreapp3.1/EquipmentChecklistDataAccess.csprojAssemblyReference.cache
