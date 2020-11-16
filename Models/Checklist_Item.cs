@@ -16,19 +16,9 @@ namespace EquipmentChecklistDataAccess.Models
         public int ChecklistID { get; set; }
         //checklist id
 
-
-        //conditionID
-        [ForeignKey("Equipment_TypeID")]
-        [Column(TypeName = "NVARCHAR(5)")]
-        public Equipment_Type Equipment_Type { get; set; }
-        public string Equipment_TypeID { get; set; }
-        //conditionID
-
-        //componentID
-        [ForeignKey("ComponentID")]
-        [Column(TypeName = "NVARCHAR(5)")]
-        public Component Component { get; set; }
-        public string ComponentID{ get; set; }
+        //question
+        //no need to reference composite keys
+        public Question Question { get; set; }
         //componentID
 
         //conditionID
