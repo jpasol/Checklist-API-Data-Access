@@ -26,7 +26,7 @@ namespace EquipmentChecklistDataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Checklist_Item>()
-                .HasKey(c => new { c.ChecklistID, c.ConditionID });
+                .HasKey(c => new { c.ChecklistID, c.Equipment_TypeID, c.ComponentID, c.ConditionID });
 
             modelBuilder.Entity<Question>()
                 .HasKey(c => new { c.Equipment_TypeID, c.ComponentID });
