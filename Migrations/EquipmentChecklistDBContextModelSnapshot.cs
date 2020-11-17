@@ -17,7 +17,7 @@ namespace EquipmentChecklistDataAccess.Migrations
             modelBuilder
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.0");
+                .HasAnnotation("ProductVersion", "3.1.7");
 
             modelBuilder.Entity("EquipmentChecklistDataAccess.Models.Admin", b =>
                 {
@@ -77,7 +77,7 @@ namespace EquipmentChecklistDataAccess.Migrations
 
                     b.HasIndex("ConditionID");
 
-                    b.HasIndex("Equipment_TypeID", "ComponentID");
+                    b.HasIndex("Equipment_TypeID");
 
                     b.ToTable("Checklist_Items");
                 });
@@ -246,12 +246,6 @@ namespace EquipmentChecklistDataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EquipmentChecklistDataAccess.Models.Question", "Question")
-                        .WithMany()
-                        .HasForeignKey("Equipment_TypeID", "ComponentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Checklist");
 
                     b.Navigation("Component");
@@ -259,8 +253,6 @@ namespace EquipmentChecklistDataAccess.Migrations
                     b.Navigation("Condition");
 
                     b.Navigation("Equipment_Type");
-
-                    b.Navigation("Question");
                 });
 
             modelBuilder.Entity("EquipmentChecklistDataAccess.Models.Equipment", b =>
