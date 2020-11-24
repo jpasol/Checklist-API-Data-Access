@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -10,40 +11,43 @@ namespace EquipmentChecklistDataAccess.Models
         //composite key added in DBContext 
 
         //checklistId
-        [ForeignKey("ChecklistID")]
+        [ForeignKey("Checklist")]
         [Column(TypeName = "NVARCHAR(5)")]
-        public Checklist Checklist { get; set; }
         public int ChecklistID { get; set; }
         //checklist id
 
         //conditionID
-        [ForeignKey("Equipment_TypeID")]
-        [Column(TypeName = "NVARCHAR(5)")]
-        public Equipment_Type Equipment_Type { get; set; }
+        [ForeignKey("Equipment_Type")]
+        [Column(TypeName = "NVARCHAR(5)", Order = 1)]
         public string Equipment_TypeID { get; set; }
         //conditionID
 
         //componentID
-        [ForeignKey("ComponentID")]
-        [Column(TypeName = "NVARCHAR(5)")]
-        public Component Component { get; set; }
+        [ForeignKey("Component")]
+        [Column(TypeName = "NVARCHAR(5)", Order = 2)]
         public string ComponentID { get; set; }
         //componentID
 
-        //question
-        //no need to reference composite keys
-        public Question Question { get; set; }
-        //componentID
 
         //conditionID
-        [ForeignKey("ConditionID")]
+        [ForeignKey("Condition")]
         [Column(TypeName = "NVARCHAR(5)")]
-        public Condition Condition { get; set; }
         public string ConditionID { get; set; }
         //conditionID
 
         [Column(TypeName = "NVARCHAR(50)")]
         public string Remarks { get; set; }
+
+        [Required]
+        public Question Question { get; set; }
+        [Required]
+        public Condition Condition { get; set; }
+        [Required]
+        public Component Component { get; set; }
+        [Required]
+        public Checklist Checklist { get; set; }
+        [Required]
+        public Equipment_Type Equipment_Type { get; set; }
 
     }
 }
