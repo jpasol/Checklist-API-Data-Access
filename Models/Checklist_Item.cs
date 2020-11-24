@@ -12,7 +12,6 @@ namespace EquipmentChecklistDataAccess.Models
 
         //checklistId
         [ForeignKey("Checklist")]
-        [Column(TypeName = "NVARCHAR(5)")]
         public int ChecklistID { get; set; }
         //checklist id
 
