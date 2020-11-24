@@ -28,8 +28,32 @@ namespace EquipmentChecklistDataAccess
             modelBuilder.Entity<Checklist_Item>()
                 .HasKey(c => new { c.ChecklistID, c.Equipment_TypeID, c.ComponentID, c.ConditionID });
 
+            modelBuilder.Entity<Checklist_Item>()
+                .HasOne(c => c.Question)
+                .WithMany()
+                .HasForeignKey(c => new { c.Equipment_TypeID, c.ComponentID});
+
+            //modelBuilder.Entity<Checklist_Item>()
+            //    .Property(c => c.Question).IsRequired();
+
+
+            //modelBuilder.Entity<Checklist_Item>()
+            //    .Property(c => c.Question).IsRequired();
+
             modelBuilder.Entity<Question>()
                 .HasKey(c => new { c.Equipment_TypeID, c.ComponentID });
+
+            //modelBuilder.Entity<Question>()
+            //    .HasOne(c => c.Component)
+            //    .WithMany()
+            //    .HasForeignKey(c => c.Component);
+
+            //modelBuilder.Entity<Question>()
+            //    .HasOne(c => c.Equipment_Type)
+            //    .WithMany()
+            //    .HasForeignKey(c => c.Equipment_Type);
+
+
 
             modelBuilder.Entity<Admin>()
                 .HasKey(c => new { c.UserID });
