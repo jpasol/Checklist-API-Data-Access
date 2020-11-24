@@ -13,9 +13,8 @@ namespace EquipmentChecklistDataAccess.Models
         public int ID { get; set; }
         
         //equipment id
-        [ForeignKey("EquipmentID")]
+        [ForeignKey("Equipment")]
         [Column(TypeName = "NVARCHAR(5)")]
-        public Equipment Equipment { get; set; }
         public string EquipmentID { get; set; }
         //equipment id
 
@@ -23,12 +22,12 @@ namespace EquipmentChecklistDataAccess.Models
         public DateTime Date_Created { get; set; }
 
         //user id
-        [ForeignKey("UserID")]
+        [ForeignKey("User")]
         [Column(TypeName = "NVARCHAR(15)")]
-        public User User { get; set; }
         public string UserID { get; set; }
         //user id
-
+        public Equipment Equipment { get; set; }
+        public User User { get; set; }
         public HashSet<Checklist_Item> Checklist_Items { get; set; }
 
     }
