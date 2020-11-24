@@ -14,6 +14,6 @@ namespace EquipmentChecklistDataAccess.Models
         [Column(TypeName = "NVARCHAR(15)")]
         public string Shortname { get; set; }
 
-        public HashSet<Question> Questions { get; set; }
+        public virtual HashSet<Question> Questions { get; set; }
     }
 }
