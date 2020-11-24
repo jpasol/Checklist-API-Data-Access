@@ -31,7 +31,8 @@ namespace EquipmentChecklistDataAccess
             modelBuilder.Entity<Checklist_Item>()
                 .HasOne(c => c.Question)
                 .WithMany()
-                .HasForeignKey(c => new { c.Equipment_TypeID, c.ComponentID});
+                .HasForeignKey(c => new { c.Equipment_TypeID, c.ComponentID})
+                .OnDelete(DeleteBehavior.NoAction);
 
             //modelBuilder.Entity<Checklist_Item>()
             //    .Property(c => c.Question).IsRequired();
