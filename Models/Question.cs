@@ -28,9 +28,7 @@ namespace EquipmentChecklistDataAccess.Models
         public string Question_Text { get; set; }
         public int Rank { get; set; }
 
-        [Required]
         public virtual Equipment_Type Equipment_Type { get; set; }
-        [Required]
         public virtual Component Component { get; set; }
 
     }

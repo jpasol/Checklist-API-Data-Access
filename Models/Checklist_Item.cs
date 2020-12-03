@@ -37,15 +37,10 @@ namespace EquipmentChecklistDataAccess.Models
         [Column(TypeName = "NVARCHAR(50)")]
         public string Remarks { get; set; }
 
-        [Required]
         public Question Question { get; set; }
-        [Required]
         public Condition Condition { get; set; }
-        [Required]
         public Component Component { get; set; }
-        [Required]
         public Checklist Checklist { get; set; }
-        [Required]
         public Equipment_Type Equipment_Type { get; set; }
 
     }
