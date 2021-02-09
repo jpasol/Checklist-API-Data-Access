@@ -6,7 +6,7 @@ using System.Text;
 
 namespace EquipmentChecklistDataAccess.Models
 {
-    class Voucher
+    public class Voucher
     {
         [ForeignKey("UserID")]
         [Column(TypeName = "NVARCHAR(15)")]
