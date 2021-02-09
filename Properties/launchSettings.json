@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EquipmentChecklistDataAccess": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
