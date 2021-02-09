@@ -22,6 +22,7 @@ namespace EquipmentChecklistDataAccess
         public DbSet<Question> Questions { get; set; }  
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Voucher> Vouchers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,6 +34,9 @@ namespace EquipmentChecklistDataAccess
                 .WithMany()
                 .HasForeignKey(c => new { c.Equipment_TypeID, c.ComponentID})
                 .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Voucher>()
+                .HasKey(c => new { c.UserID, c.EquipmentID });
 
             //modelBuilder.Entity<Checklist_Item>()
             //    .Property(c => c.Question).IsRequired();
